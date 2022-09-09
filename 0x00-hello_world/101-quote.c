@@ -1,9 +1,10 @@
+#!/bin/bash
 #include <unistd.h>
 
 /**
- * main -Prints a text
+ *main -Entry point
  *
- * Return: Always 1 (success)
+ * Return:Always 1
  */
 int main (void)
 {
