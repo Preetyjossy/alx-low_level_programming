@@ -1,16 +1,11 @@
-#include "main.h"
+root@0f9e5c68528f:/alx-low_level_programming/0x03-debugging# cat > main.h
+#ifndef MAIN_H
+#define MAIN_H
 
-/**
-* main - tests function that prints if integer is positive or negative
-* Return: 0
-*/
+#include <stdio.h>
 
-int main(void)
-{
-int i;
+void positive_or_negative(int i);
+int largest_number(int, int, int);
+void print_remaining_days(int, int, int);
+int convert_day(int, int);
 
-i = 0;
-positive_or_negative(i);
-
-return (0);
-}
