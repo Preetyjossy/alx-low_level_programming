@@ -1,100 +1,46 @@
 #include <stdio.h>
-
-
+#include <stdlib.h>
 /**
-
-
- * main - print possible combination of two 2-digit
-
-
- * numbers
-
-
- *
-
-
- * Return: returns zero at the end
-
-
+ * main -mainblock to e executed
+ * Descripton: program that prints all possible combinations of digits
+ * Return: 0
  */
-
-
 int main(void)
-
-
 {
+int c = 0;
+int f_d;
+int l_d;
 
+int c2;
+int f_d2;
+int l_d2;
 
-	int i, p;
-
-
-
-
-
-
-
-	for (i = 0; i < 100; i++)
-
-
+while (c <= 98)
+{
+	f_d = (c / 10 + '0');
+	l_d = (c % 10 + '0');
+	c2 = 0;
+	while (c2 <= 99)
 	{
-
-
-		for (p = 0; p < 100; j++)
-
-
+		f_d2 = (c2 / 10 + '0');
+		l_d2 = (c2 % 10 + '0');
+		if (c < c2)
 		{
-
-
-			if (p > i)
-
-
+			putchar(f_d);
+			putchar(l_d);
+			putchar(' ');
+			putchar(f_d2);
+			putchar(l_d2);
+			if (c != 98)
 			{
-
-
-				putchar((i / 10) + '0');
-
-
-				putchar((i % 10) + '0');
-
-
+				putchar(',');
 				putchar(' ');
-
-
-				putchar((p / 10) + '0');
-
-
-				putchar((p % 10) + '0');
-
-
-				if (i != 98)
-
-
-				{
-
-
-					putchar(',');
-
-
-					putchar(' ');
-
-
-				}
-
-
 			}
-
-
 		}
-
-
+		c2++;
 	}
-
-
-	putchar('\n');
-
-
-	return (0);
-
-
+	c++;
 }
-
+putchar('\n');
+return (0);
+}
